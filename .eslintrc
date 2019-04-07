@@ -1,0 +1,10 @@
+{
+  "extends": "rallycoding",
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "import/no-named-as-default": 0
+  }
+}
