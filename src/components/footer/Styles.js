@@ -13,7 +13,9 @@ export default StyleSheet.create({
     shadowColor: '#000',
     shadowOpacity: 0.04,
     elevation: 1,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    paddingLeft: 25,
+    paddingRight: 25
   },
   textStyle: {
     fontSize: 25,
@@ -25,7 +27,6 @@ export default StyleSheet.create({
     alignSelf: 'center'
   },
   wrapperStyle: {
-    paddingLeft: 25,
-    paddingRight: 25
+    width: '100%'
   }
 });
