@@ -1,9 +1,13 @@
 import { StyleSheet } from 'react-native';
+import { Constants } from 'expo';
 
 export default StyleSheet.create({
-  containerStyle: {
-    backgroundColor: '#FFFFFF',
+  container: {
     flex: 1,
-    justifyContent: 'space-between'
+    justifyContent: 'center',
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#b6b8c3',
+    fontFamily: 'Raleway',
+    padding: 8
   }
 });
