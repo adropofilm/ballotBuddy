@@ -14,8 +14,8 @@ export default StyleSheet.create({
     shadowOpacity: 0.04,
     elevation: 1,
     flexDirection: 'row',
-    paddingLeft: 25,
-    paddingRight: 25
+    paddingLeft: 45,
+    paddingRight: 45
   },
   textStyle: {
     fontSize: 25,
