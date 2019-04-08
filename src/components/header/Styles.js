@@ -2,15 +2,16 @@ import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   textStyle: {
-    fontSize: 25,
-    color: '#00CA9D'
+    fontSize: 35,
+    color: '#5B858A',
+    fontWeight: 'bold',
   },
   headerStyle: {
     backgroundColor: '#FFFFFF',
     alignItems: 'center',
     justifyContent: 'center',
-    height: 100,
-    paddingTop: 20,
+    height: 50,
+    paddingTop: 10,
     position: 'relative'
   }
 });

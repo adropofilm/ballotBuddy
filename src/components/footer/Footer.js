@@ -54,14 +54,14 @@ function renderIcons(props) {
   return (
     <View style={styles.wrapperStyle}>
       <View style={styles.containerStyle}>
+      <TouchableOpacity onPress={() => props.nav.navigate('HomeScreen')}>
+        <Image source={involvement} style={styles.iconStyle} />
+      </TouchableOpacity>
         <TouchableOpacity onPress={() => props.nav.navigate('BillsScreen')}>
           <Image source={parchment} style={styles.iconStyle} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => props.nav.navigate('CandidatesScreen')}>
           <Image source={president} style={styles.iconStyle} />
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => props.nav.navigate('HomeScreen')}>
-          <Image source={involvement} style={styles.iconStyle} />
         </TouchableOpacity>
         <TouchableOpacity onPress={() => props.nav.navigate('PollsScreen')}>
           <Image source={poll} style={styles.iconStyle} />

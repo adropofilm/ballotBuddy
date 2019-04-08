@@ -1,4 +1,60 @@
-export { candidatesInfo };
+import React, { Component } from 'react';
+import { phonecall, email } from 'react-native-communications';
+import { View, FlatList, Text, TouchableOpacity, Image, Linking } from 'react-native';
+
+import styles from './Styles.js';
+
+const website = require('../../assets/icons/website.png');
+const phone = require('../../assets/icons/phone.png');
+const emailIcon = require('../../assets/icons/email.png');
+
+console.disableYellowBox = true;
+
+// Make a component
+export default class CandidateList extends Component {
+  render() {
+  return (
+    <View style={styles.container}>
+      <View style={styles.headersStyle}>
+        <Text style={styles.headerStyle}> U.S. Presidential Election </Text>
+        <Text style={styles.dateStyle}>Nov. 3 2020</Text>
+      </View>
+      <FlatList
+        data={candidatesInfo} renderItem={({ item }) =>
+          <View style={styles.candidateStyle}>
+            <View><Image source={{ uri: item.image }} style={styles.candidateThumbnailStyle} />
+              <Text style={styles.candidateNameStyle}>{`${item.firstName}${item.lastName}`}</Text>
+              <Text style={styles.candidatePartyStyle}>{item.party}</Text>
+            </View>
+            <View style={styles.columnStyle}>
+              <Text style={styles.candidateRoleStyle}>{item.currentRole}</Text>
+              <Text style={styles.candidateFactsStyle}>
+                {item.fastFacts[0].factOne}
+              </Text>
+              <Text style={styles.candidateFactTwoStyle}>
+                {item.fastFacts[1].factTwo}
+              </Text>
+            </View>
+            <View style={styles.iconStyles}>
+              <TouchableOpacity onPress={() => phonecall('231-533-3345', true)} >
+                <Image source={phone} style={styles.iconStyle} />
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={() => email('mailto:support@example.com', null, null, '', '')}
+              >
+                <Image source={emailIcon} style={styles.iconStyle} />
+              </TouchableOpacity>
+              <TouchableOpacity onPress={() => Linking.openURL('https://www.nytimes.com/interactive/2019/us/politics/2020-presidential-candidates.html')}>
+                <Image source={website} style={styles.iconStyle} />
+              </TouchableOpacity>
+            </View>
+          </View>
+        }
+      />
+    </View>
+  );
+  }
+}
 
 const candidatesInfo = [
    {
@@ -37,7 +93,7 @@ const candidatesInfo = [
    },
    {
       firstName: 'Pete',
-      lastName: 'Buttigieg',
+      lastName: 'Butgieg',
       image: 'https://i.ibb.co/n1MG1gn/buttigieg.png',
       party: 'Democrat',
       currentRole: 'Mayor of South Bend, Ind.; military veteran',
@@ -136,7 +192,7 @@ const candidatesInfo = [
    },
    {
       firstName: 'Tulsi',
-      lastName: 'Gabbard',
+      lastName: 'Gabard',
       image: 'https://i.ibb.co/BGgrYyZ/gabbard.png',
       party: 'Democrat',
       currentRole: 'Congresswoman from Hawaii; Army National Guard veteran',
@@ -170,7 +226,7 @@ const candidatesInfo = [
    },
    {
       firstName: 'Kristen',
-      lastName: 'Gillibrand',
+      lastName: 'Gilband',
       image: 'https://i.ibb.co/3Wr4shN/gillibrand.png',
       party: 'Democrat',
       currentRole: 'Senator from New York; former congresswoman',
@@ -203,7 +259,7 @@ const candidatesInfo = [
    },
    {
       firstName: 'Kamala',
-      lastName: 'Harris',
+      lastName: 'Haris',
       image: 'https://i.ibb.co/c6DxPYn/harris.png',
       party: 'Democrat',
       currentRole: 'Senator from California; former attorney general of California;'
@@ -236,7 +292,7 @@ const candidatesInfo = [
    },
    {
       firstName: 'John',
-      lastName: 'Hickenlooper',
+      lastName: 'Hicloopr',
       image: 'https://i.ibb.co/8rdyRkY/hickenlooper.png',
       party: 'Democrat',
       currentRole: 'Former governor of Colorado; former mayor of Denver',
@@ -303,7 +359,7 @@ const candidatesInfo = [
    },
    {
       firstName: 'Amy',
-      lastName: 'Klobuchar',
+      lastName: 'Klochar',
       image: 'https://i.ibb.co/X2rBhSD/klobuchar.png',
       party: 'Democrat',
       currentRole: 'Senator from Minnesota; former Hennepin County, Minn., attorney',
@@ -335,7 +391,7 @@ const candidatesInfo = [
    },
    {
       firstName: 'Wayne',
-      lastName: 'Messam',
+      lastName: 'Mesam',
       image: 'https://i.ibb.co/ZhjpDQd/messam.png',
       party: 'Democrat',
       currentRole: 'Mayor of Miramar, Fla.; former college football champion',
@@ -369,7 +425,7 @@ const candidatesInfo = [
    },
    {
       firstName: 'Beto',
-      lastName: 'O’Rourke',
+      lastName: 'O’Rouke',
       image: 'https://i.ibb.co/B4bXxLR/orourke.png',
       party: 'Democrat',
       currentRole: 'Former congressman from Texas',
@@ -436,8 +492,8 @@ const candidatesInfo = [
        + 'Americans ... It’s time for us to start building the America we deserve.'
    },
    {
-      firstName: 'Sanders',
-      lastName: 'Bernie',
+      firstName: 'Saders',
+      lastName: 'Berni',
       image: 'https://i.ibb.co/xgvQ73N/sanders.png',
       party: 'Democrat',
       currentRole: 'Senator from Vermont; former congressman',
@@ -469,7 +525,7 @@ const candidatesInfo = [
       + ' which has never been seen in American history.'
    },
    {
-      firstName: 'Elizabeth',
+      firstName: 'Liz',
       lastName: 'Warren',
       image: 'https://i.ibb.co/hYjjgD4/warren.png',
       party: 'Democrat',
@@ -635,3 +691,5 @@ const candidatesInfo = [
       + 'being the party of Lincoln.'
    }
 ];
+
+//export default CandidateList;

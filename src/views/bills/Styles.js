@@ -4,6 +4,7 @@ export default StyleSheet.create({
   containerStyle: {
     backgroundColor: '#FFFFFF',
     flex: 1,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    alignContent: 'center'
   }
 });

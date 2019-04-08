@@ -5,5 +5,10 @@ export default StyleSheet.create({
     backgroundColor: '#FFFFFF',
     flex: 1,
     justifyContent: 'space-between'
+  },
+  comingSoonStyle: {
+    fontSize: 25,
+    color: '#5B858A',
+    alignSelf: 'center'
   }
 });

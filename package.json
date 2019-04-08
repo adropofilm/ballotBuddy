@@ -9,9 +9,11 @@
   "dependencies": {
     "axios": "^0.18.0",
     "expo": "^32.0.6",
+    "isomorphic-fetch": "^2.2.1",
     "metro-config": "^0.53.1",
     "react": "16.8.3",
     "react-native": "0.59.3",
+    "react-native-communications": "^2.2.1",
     "react-native-gesture-handler": "^1.1.0",
     "react-navigation": "^3.6.1"
   },
@@ -22,6 +24,7 @@
     "eslint-config-rallycoding": "^3.2.0",
     "jest": "24.7.1",
     "metro-react-native-babel-preset": "0.53.1",
+    "react-native-paper": "^2.15.1",
     "react-test-renderer": "16.8.3"
   },
   "jest": {

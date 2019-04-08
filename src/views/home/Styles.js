@@ -5,5 +5,5 @@ export default StyleSheet.create({
     backgroundColor: '#FFFFFF',
     flex: 1,
     justifyContent: 'space-between'
-  }
+  },
 });
